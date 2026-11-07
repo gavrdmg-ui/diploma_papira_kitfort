@@ -4,8 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import pages.components.LoginFormComponent;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.open;
@@ -61,7 +60,11 @@ public class PersonalAccountPage {
     @Step("Нажимаем на кнопу \"Сохранить изменения\"")
     public PersonalAccountPage saveChanges() {
         saveButton.click();
-        saveNotification.shouldHave(text("Изменения сохранены"));
+        return this;
+    }
+    @Step("Проверяем наличие собщения \"Изменения сохранены\"")
+    public PersonalAccountPage saveChangesMessageExist() {
+        saveNotification.shouldBe(visible).shouldHave(text("Изменения сохранены"));
         return this;
     }
 

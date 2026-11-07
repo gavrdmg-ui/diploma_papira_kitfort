@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.*;
+import testdata.TestData;
 
 import java.util.List;
 import java.util.Map;
@@ -21,9 +22,11 @@ public class BaseTest {
     NewProductsPage newProducts = new NewProductsPage();
     FavoriteProductsPage favoriteProducts = new FavoriteProductsPage();
     ProductsPage productsPage = new ProductsPage();
+    public static TestData testData;
 
     @BeforeAll
     static void setup() {
+        testData = new TestData();
         Configuration.browser = ConfigProvider.webConfig.browser();
         Configuration.browserVersion = ConfigProvider.webConfig.browserVersion();
         Configuration.browserSize = ConfigProvider.webConfig.browserSize();

@@ -2,6 +2,7 @@ package tests;
 
 import config.ConfigProvider;
 import org.junit.jupiter.api.Test;
+import testdata.TestData;
 
 
 public class AuthorizationTests extends BaseTest {
@@ -26,7 +27,7 @@ public class AuthorizationTests extends BaseTest {
         mainPage.loginForm.typeEmail("email@gmail.com")
                 .typePassword("123")
                 .pressLoginButton()
-                .checkErrorMessage("Неверный логин или пароль.");
+                .checkErrorMessage(TestData.formError);
     }
 
     @Test

@@ -15,12 +15,13 @@ public class EditProfileTest extends BaseTest {
                 .pressLoginButton();
 
         accountPage.openPage()
-                .editName("Иван")
-                .editLastName("Иванов")
-                .editSecondName("Иванович")
-                .editBirthDate("27.09.2000")
+                .editName(testData.newName)
+                .editLastName(testData.newLastName)
+                .editSecondName(testData.newSecondName)
+                .editBirthDate(testData.birthDate)
                 .saveChanges()
+                .saveChangesMessageExist()
                 .openPage()
-                .checkPersonalData("Иван", "Иванов", "Иванович", "27.09.2000");
+                .checkPersonalData(testData.newName, testData.newLastName, testData.newSecondName, testData.birthDate);
     }
 }
