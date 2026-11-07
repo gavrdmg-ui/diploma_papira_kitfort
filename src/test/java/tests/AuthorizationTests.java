@@ -24,8 +24,8 @@ public class AuthorizationTests extends BaseTest {
     void loginWithWrongCredentials() {
         mainPage.openPage()
                 .openLoginForm();
-        mainPage.loginForm.typeEmail("email@gmail.com")
-                .typePassword("123")
+        mainPage.loginForm.typeEmail(TestData.invalidEmail)
+                .typePassword(TestData.invalidPassword)
                 .pressLoginButton()
                 .checkErrorMessage(TestData.formError);
     }
