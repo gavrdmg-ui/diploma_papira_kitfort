@@ -6,15 +6,23 @@ import org.aeonbits.owner.Config;
         "classpath:configurations/WebUIConfig.properties"
 })
 public interface WebUIConfig extends Config {
+
+
+    @DefaultValue("chrome")
     String browser();
 
+    @DefaultValue("156")
     String browserVersion();
 
+    @DefaultValue("1920x1080")
     String browserSize();
 
-    boolean  headless();
+    @DefaultValue("false")
+    boolean headless();
 
-    boolean  holdBrowserOpen();
+    @DefaultValue("false")
+    boolean holdBrowserOpen();
 
+    @DefaultValue("https://kitfort.ru/")
     String baseUrl();
 }

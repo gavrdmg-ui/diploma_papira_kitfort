@@ -24,10 +24,10 @@ public class BaseTest {
 
     @BeforeAll
     static void setup() {
-        Configuration.browser= ConfigProvider.webConfig.browser();
-        Configuration.browserVersion=ConfigProvider.webConfig.browserVersion();
+        Configuration.browser = ConfigProvider.webConfig.browser();
+        Configuration.browserVersion = ConfigProvider.webConfig.browserVersion();
         Configuration.browserSize = ConfigProvider.webConfig.browserSize();
-        Configuration.headless= ConfigProvider.webConfig.headless();
+        Configuration.headless = ConfigProvider.webConfig.headless();
         Configuration.holdBrowserOpen = ConfigProvider.webConfig.holdBrowserOpen();
         Configuration.baseUrl = ConfigProvider.webConfig.baseUrl();
         //Configuration.remote = System.getProperty("remoteURL","https://user1:1234@selenoid.qa.guru/wd/hub");

@@ -2,10 +2,10 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-public class SearchProductTest extends BaseTest{
+public class SearchProductTest extends BaseTest {
 
     @Test
-    public void searchProduct(){
+    public void searchProduct() {
         mainPage.openPage()
                 .typeSearch("кофемашинка")
                 .makeSearch();

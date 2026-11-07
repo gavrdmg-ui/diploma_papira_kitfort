@@ -1,5 +1,6 @@
 package tests;
 
+import config.ConfigProvider;
 import org.junit.jupiter.api.Test;
 
 
@@ -10,12 +11,12 @@ public class AuthorizationTests extends BaseTest {
         mainPage.openPage()
                 .openLoginForm();
 
-        mainPage.loginForm.typeEmail("rudenkoi528@gmail.com")
-                .typePassword("aezakmi135")
+        mainPage.loginForm.typeEmail(ConfigProvider.testDataConfig.validEmail())
+                .typePassword(ConfigProvider.testDataConfig.validPassword())
                 .pressLoginButton();
 
         accountPage.openPage()
-                .checkEmail("rudenkoi528@gmail.com");
+                .checkEmail(ConfigProvider.testDataConfig.validEmail());
     }
 
     @Test
@@ -33,8 +34,8 @@ public class AuthorizationTests extends BaseTest {
         mainPage.openPage()
                 .openLoginForm();
 
-        mainPage.loginForm.typeEmail("rudenkoi528@gmail.com")
-                .typePassword("aezakmi135")
+        mainPage.loginForm.typeEmail(ConfigProvider.testDataConfig.validEmail())
+                .typePassword(ConfigProvider.testDataConfig.validPassword())
                 .pressLoginButton();
 
         accountPage.openPage()

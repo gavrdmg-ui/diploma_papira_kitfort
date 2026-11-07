@@ -2,10 +2,10 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-public class CatalogTest extends BaseTest{
+public class CatalogTest extends BaseTest {
 
     @Test
-    public void addNewItemToFavorite(){
+    public void addNewItemToFavorite() {
         newProducts.openPage()
                 .choseFirstProductAsFavorite()
                 .openPage()
@@ -14,7 +14,7 @@ public class CatalogTest extends BaseTest{
     }
 
     @Test
-    public void checkThatNewProductExistOnFavoritePage(){
+    public void checkThatNewProductExistOnFavoritePage() {
         newProducts.openPage()
                 .choseFirstProductAsFavorite();
         favoriteProducts.openPage()

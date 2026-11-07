@@ -1,17 +1,17 @@
 package tests;
 
+import config.ConfigProvider;
 import org.junit.jupiter.api.Test;
 
-public class EditProfileTest extends BaseTest{
+public class EditProfileTest extends BaseTest {
 
     @Test
-    public void editUserInformation()
-    {
+    public void editUserInformation() {
         mainPage.openPage()
                 .openLoginForm();
 
-        mainPage.loginForm.typeEmail("rudenkoi528@gmail.com")
-                .typePassword("aezakmi135")
+        mainPage.loginForm.typeEmail(ConfigProvider.testDataConfig.validEmail())
+                .typePassword(ConfigProvider.testDataConfig.validPassword())
                 .pressLoginButton();
 
         accountPage.openPage()
@@ -21,6 +21,6 @@ public class EditProfileTest extends BaseTest{
                 .editBirthDate("27.09.2000")
                 .saveChanges()
                 .openPage()
-                .checkPersonalData("Иван","Иванов","Иванович","27.09.2000");
+                .checkPersonalData("Иван", "Иванов", "Иванович", "27.09.2000");
     }
 }

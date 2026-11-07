@@ -16,22 +16,25 @@ public class MainPage {
     public LoginFormComponent loginForm = new LoginFormComponent();
 
     @Step("Открываем страницу kitfort.ru")
-    public MainPage openPage(){
+    public MainPage openPage() {
         open("");
         return this;
     }
+
     @Step("Открываем окно для входа")
-    public MainPage openLoginForm(){
+    public MainPage openLoginForm() {
         loginButton.click();
         return this;
     }
+
     @Step("Вводим в поле поиска запрос {searchQuery}")
-    public MainPage typeSearch(String searchQuery){
+    public MainPage typeSearch(String searchQuery) {
         searchInput.setValue(searchQuery);
         return this;
     }
+
     @Step("Нажимаем на кнопку поиска")
-    public MainPage makeSearch(){
+    public MainPage makeSearch() {
         searchButton.click();
         return this;
     }
