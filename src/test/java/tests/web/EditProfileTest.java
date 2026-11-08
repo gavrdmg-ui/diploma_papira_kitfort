@@ -1,11 +1,14 @@
 package tests.web;
 
 import config.ConfigProvider;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("Тесты на редактирование профиля пользователя")
 public class EditProfileTest extends BaseTest {
 
     @Test
+    @DisplayName("Редактирование данных пользователя. Проверка что данные изменились")
     public void editUserInformation() {
         mainPage.openPage()
                 .openLoginForm();

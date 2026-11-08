@@ -1,13 +1,14 @@
 package tests.web;
 
 import config.ConfigProvider;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import testdata.TestData;
 
-
+@DisplayName("Тесты на авторизацию")
 public class AuthorizationTests extends BaseTest {
-
     @Test
+    @DisplayName("Успешная авторизация пользователя")
     void successfulLoginTest() {
         mainPage.openPage()
                 .openLoginForm();
@@ -21,6 +22,7 @@ public class AuthorizationTests extends BaseTest {
     }
 
     @Test
+    @DisplayName("Авторизация с невалидными логином и паролем")
     void loginWithWrongCredentials() {
         mainPage.openPage()
                 .openLoginForm();
@@ -31,6 +33,7 @@ public class AuthorizationTests extends BaseTest {
     }
 
     @Test
+    @DisplayName("Успешный выход пользователя из системы")
     void successfulLogOut() {
         mainPage.openPage()
                 .openLoginForm();
