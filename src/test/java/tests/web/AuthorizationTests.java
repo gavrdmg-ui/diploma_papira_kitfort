@@ -1,4 +1,4 @@
-package tests;
+package tests.web;
 
 import config.ConfigProvider;
 import org.junit.jupiter.api.Test;

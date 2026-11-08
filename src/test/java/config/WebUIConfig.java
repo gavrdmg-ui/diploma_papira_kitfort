@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:configurations/WebUIConfig.properties"
+        "classpath:configurations/web/WebUIConfig.properties"
 })
 public interface WebUIConfig extends Config {
 
