@@ -4,13 +4,14 @@ import io.qameta.allure.Step;
 import pages.components.FavoriteIconComponent;
 
 import static com.codeborne.selenide.Selenide.open;
+import static testdata.TestData.favoritePath;
 
 public class FavoriteProductsPage {
     private final FavoriteIconComponent favorite = new FavoriteIconComponent();
 
     @Step("Открываем страницу favorites/")
     public FavoriteProductsPage openPage() {
-        open("favorites/");
+        open(favoritePath);
         return this;
     }
 

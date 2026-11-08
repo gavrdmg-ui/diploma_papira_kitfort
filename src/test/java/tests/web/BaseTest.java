@@ -33,7 +33,7 @@ public class BaseTest {
         Configuration.headless = ConfigProvider.webConfig.headless();
         Configuration.holdBrowserOpen = ConfigProvider.webConfig.holdBrowserOpen();
         Configuration.baseUrl = ConfigProvider.webConfig.baseUrl();
-        Configuration.remote = System.getProperty("remoteURL","");
+        Configuration.remote = System.getProperty("remoteURL");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments(List.of("--disable-dev-shm-usage", "--no-sandbox"));

@@ -13,12 +13,12 @@ public class AuthorizationTests extends BaseTest {
         mainPage.openPage()
                 .openLoginForm();
 
-        mainPage.loginForm.typeEmail(ConfigProvider.testDataConfig.validEmail())
-                .typePassword(ConfigProvider.testDataConfig.validPassword())
+        mainPage.loginForm.typeEmail(TestData.userEmail)
+                .typePassword(TestData.userPassword)
                 .pressLoginButton();
 
         accountPage.openPage()
-                .checkEmail(ConfigProvider.testDataConfig.validEmail());
+                .checkEmail(TestData.userEmail);
     }
 
     @Test
@@ -38,8 +38,8 @@ public class AuthorizationTests extends BaseTest {
         mainPage.openPage()
                 .openLoginForm();
 
-        mainPage.loginForm.typeEmail(ConfigProvider.testDataConfig.validEmail())
-                .typePassword(ConfigProvider.testDataConfig.validPassword())
+        mainPage.loginForm.typeEmail(TestData.userEmail)
+                .typePassword(TestData.userPassword)
                 .pressLoginButton();
 
         accountPage.openPage()

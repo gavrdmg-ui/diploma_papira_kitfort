@@ -6,22 +6,28 @@ import pages.components.FavoriteIconComponent;
 
 import static com.codeborne.selenide.Condition.clickable;
 import static com.codeborne.selenide.Selenide.*;
+import static testdata.TestData.newProductsPath;
 
 public class NewProductsPage {
     private final FavoriteIconComponent favorite = new FavoriteIconComponent();
-    private final SelenideElement listOfProducts = $("#catalog-section");
     private final SelenideElement addToFavoriteButton = $(".item__gallery-link .add_fav");
     private String chosenItem;
 
     @Step("Открываем страницу new-items/")
     public NewProductsPage openPage() {
-        open("new-items/");
+        open(newProductsPath);
         return this;
     }
 
     @Step("Добавляем первый товар в избранное")
     public NewProductsPage choseFirstProductAsFavorite() {
-        addToFavoriteButton.shouldBe(clickable);
+        try {
+            Thread.sleep(1000);
+            addToFavoriteButton.shouldBe(clickable);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         addToFavoriteButton.click();
         chosenItem = addToFavoriteButton.getAttribute("data-id");
         return this;

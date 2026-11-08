@@ -15,4 +15,9 @@ public interface TestDataConfig extends Config {
     @DefaultValue("")
     String validPassword();
 
+    @Key("searchQuery")
+    @DefaultValue("кофемолка")
+    String searchQuery();
+
+
 }

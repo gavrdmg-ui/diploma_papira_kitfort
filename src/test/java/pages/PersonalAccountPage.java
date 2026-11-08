@@ -8,6 +8,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.open;
+import static testdata.TestData.profilePath;
 
 public class PersonalAccountPage {
 
@@ -23,7 +24,7 @@ public class PersonalAccountPage {
 
     @Step("Открываем страницу personal/profile/")
     public PersonalAccountPage openPage() {
-        open("personal/profile/");
+        open(profilePath);
         return this;
     }
 
