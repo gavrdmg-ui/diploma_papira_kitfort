@@ -1,16 +1,13 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import pages.components.FavoriteIconComponent;
 
-import static com.codeborne.selenide.Condition.clickable;
 import static com.codeborne.selenide.Selenide.*;
 import static testdata.TestData.newProductsPath;
 
 public class NewProductsPage {
     private final FavoriteIconComponent favorite = new FavoriteIconComponent();
-    private final SelenideElement addToFavoriteButton = $(".item__gallery-link .add_fav");
     private String chosenItem;
 
     @Step("Открываем страницу new-items/")
@@ -19,23 +16,20 @@ public class NewProductsPage {
         return this;
     }
 
-    @Step("Добавляем первый товар в избранное")
-    public NewProductsPage choseFirstProductAsFavorite() {
-        try {
-            Thread.sleep(1000);
-            addToFavoriteButton.shouldBe(clickable);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        addToFavoriteButton.click();
-        chosenItem = addToFavoriteButton.getAttribute("data-id");
+    public NewProductsPage clickFavoriteButton() {
+        chosenItem = favorite.clickFavoriteIcon();
         return this;
     }
 
     @Step("Проверяем что товар добален в избранное")
-    public NewProductsPage checkThatProductIsfavorite() {
-        favorite.checkThatProductIsfavorite(chosenItem);
+    public NewProductsPage checkThatProductIsFavorite() {
+        favorite.checkThatProductIsFavorite(chosenItem);
+        return this;
+    }
+
+    @Step("Проверяем что товар не добавлен в избранное")
+    public NewProductsPage checkThatProductIsNotFavorite() {
+        favorite.checkThatProductIsNotFavorite(chosenItem);
         return this;
     }
 
