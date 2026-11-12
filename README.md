@@ -225,5 +225,7 @@ gradle allureServe
 <img src="images/allure_suites.PNG" alt="Кейсы">
 
 ## Видео прохождения теста
-https://selenoid.qa.guru/video/5bf33203e18b191d231d245a2f664e32.mp4
+<video width="320" height="240" controls>
+  <source src="https://selenoid.qa.guru/video/5bf33203e18b191d231d245a2f664e32.mp4" type="video/mp4">
+</video>
 
