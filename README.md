@@ -230,7 +230,7 @@ gradle allureServe
 <img src="images/allure_suites.PNG" alt="Кейсы">
 
 ## [Allure TestOps](https://allure.qa.guru/project/5434/test-cases)
-Интеграция с Allure TestOps прдоставляет возможность сохранять результаты прогонов и отслеживать историю запускок
+Интеграция с Allure TestOps предоставляет возможность сохранять результаты прогонов и отслеживать историю запускок
 
 <img src="images/allure-testOps.PNG" alt="TestOps">
 <img src="images/allure-testOps2.PNG" alt="TestOps2">
