@@ -15,6 +15,8 @@
 - [Запуск в удалённом браузере](#запуск-в-удалённом-браузере)
 - [Allure-отчёт](#allure-отчёт)
 - [Allure TestOps](#allure-TestOps)
+- [Jira](#jira)
+
 
 
 
@@ -207,7 +209,7 @@ gradle clean test -DremoteURL="http://selenoid-host:4444/wd/hub"
 - логи консоли браузера;
 - ссылка на видеозапись Selenoid.
 
-## Allure-отчёт
+## [Allure-отчёт](https://jenkins.qa.guru/job/42_gavrilov_diploma_papira/)
 
 Результаты Allure формируются в `build/allure-results`.
 
@@ -227,11 +229,17 @@ gradle allureServe
 
 <img src="images/allure_suites.PNG" alt="Кейсы">
 
-## Allure TestOps
+## [Allure TestOps](https://allure.qa.guru/project/5434/test-cases)
 Интеграция с Allure TestOps прдоставляет возможность сохранять результаты прогонов и отслеживать историю запускок
 
 <img src="images/allure-testOps.PNG" alt="TestOps">
 <img src="images/allure-testOps2.PNG" alt="TestOps2">
+
+
+## [Jira](https://jira.qa.guru/browse/MUL-79)
+Интеграция с Jira позволяет отображать результаты прогонов, статус каждого теста и общее время прохождения сценариев
+<img src="images/jira.PNG" alt="Jira">
+
 
 
 
