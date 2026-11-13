@@ -227,8 +227,8 @@ gradle allureServe
 ## Allure TestOps
 Интеграция с Allure TestOps прдоставляет возможность сохранять результаты прогонов и отслеживать историю запускок
 
-<img src="images/allure_testOps.PNG" alt="Кейсы">
-<img src="images/allure_testOps2.PNG" alt="Кейсы">
+<img src="images/allure_testOps.PNG" alt="TestOps">
+<img src="images/allure_testOps2.PNG" alt="TestOps2">
 
 
 
