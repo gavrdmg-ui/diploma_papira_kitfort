@@ -14,7 +14,7 @@
 - [Запуск тестов](#запуск-тестов)
 - [Запуск в удалённом браузере](#запуск-в-удалённом-браузере)
 - [Allure-отчёт](#allure-отчёт)
-- [Allure TestOps](#allure TestOps)
+- [Allure TestOps](#allure-TestOps)
 
 
 
