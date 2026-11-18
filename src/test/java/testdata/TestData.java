@@ -12,10 +12,10 @@ public class TestData {
     public String newName = faker.name().firstName();
     public String newLastName = faker.name().lastName();
     public String newSecondName = faker.name().lastName();
-    public String birthDate = String.valueOf(faker.number().numberBetween(10, 20)) + "."
-            + String.valueOf(faker.number().numberBetween(10, 12)) + "."
-            + String.valueOf(faker.number().numberBetween(1936, 2026));
-    public static final String searchQuery = ConfigProvider.testDataConfig.searchQuery();
+    public String birthDate = faker.number().numberBetween(10, 20) + "."
+            + faker.number().numberBetween(10, 12) + "."
+            + faker.number().numberBetween(1936, 2026);
+
     public static final String userEmail = ConfigProvider.testDataConfig.validEmail();
     public static final String userPassword = ConfigProvider.testDataConfig.validPassword();
 
