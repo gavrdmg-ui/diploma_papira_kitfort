@@ -16,6 +16,7 @@
 - [Allure-отчёт](#allure-отчёт)
 - [Allure TestOps](#allure-TestOps)
 - [Jira](#jira)
+- [Пример прохождения теста](#пример-прохождения-теста)
 
 
 
@@ -242,5 +243,7 @@ gradle allureServe
 
 
 
+## Пример прохождения теста
+![til](images/test_run.gif)
 
 
